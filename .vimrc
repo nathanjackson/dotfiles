@@ -50,3 +50,6 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " javacomplete2
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+" Custom Go Key Mappings
+autocmd FileType go map <F5> :GoRun<CR>
