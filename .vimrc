@@ -67,3 +67,6 @@ autocmd FileType go map <F5> :GoRun<CR>
 " Haskell
 let g:haskellmode_completion_ghc = 1
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+" quick escape
+imap xx <ESC>
