@@ -61,12 +61,16 @@ endif
 " javacomplete2
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
+" quick escape
+imap xx <ESC>
+
+" paste mode toggle
+set pastetoggle=<F2> " Toggle paste
+
 " Custom Go Key Mappings
-autocmd FileType go map <F5> :GoRun<CR>
+autocmd FileType go inoremap <F5> <ESC>:w<CR>:GoRun<CR>
+autocmd FileType go map <F5> :w<CR>:GoRun<CR>
 
 " Haskell
 let g:haskellmode_completion_ghc = 1
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-
-" quick escape
-imap xx <ESC>
