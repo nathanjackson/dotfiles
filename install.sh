@@ -23,7 +23,7 @@ wait $!
 reset
 
 # setup command-t
-eval "$SUDO yum install -y ruby-devel"
+eval "$SUDO yum install -y ruby-devel redhat-rpm-config"
 pushd $HOME/.vim/bundle/command-t/ruby/command-t
 ruby extconf.rb
 make
