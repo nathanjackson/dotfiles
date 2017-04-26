@@ -58,8 +58,9 @@ else " no gui
   endif
 endif
 
-" javacomplete2
+" Java Customizations
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
+set wildignore+=*.class " ignore class files (for command-t)
 
 " quick escape
 imap xx <ESC>
