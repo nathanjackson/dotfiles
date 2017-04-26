@@ -67,7 +67,8 @@ imap xx <ESC>
 " paste mode toggle
 set pastetoggle=<F2> " Toggle paste
 
-" Custom Go Key Mappings
+" Golang Customizations
+autocmd FileType go set tabstop=8 shiftwidth=8 expandtab!
 autocmd FileType go inoremap <F5> <ESC>:w<CR>:GoRun<CR>
 autocmd FileType go map <F5> :w<CR>:GoRun<CR>
 
