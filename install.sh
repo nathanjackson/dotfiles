@@ -11,10 +11,13 @@ then
     SUDO="sudo"
 fi
 
+eval "$SUDO yum groupinstall \"Development Tools\""
+eval "$SUDO yum install vim epel-release"
+
 # Install vundle.
 git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 # Install vimrc
-curl -s -o $HOME/.vimrc https://raw.githubusercontent.com/nathanjackson/dotfiles/master/.vimrc
+curl -s -o $HOME/.vimrc https://raw.githubusercontent.com/nathanjackson/dotfiles/altamira/.vimrc
 # we have to fork off a process to install plugins because i think vim takes
 # over the pid of the shell
 vim -c 'PluginInstall' -c 'qall' &
