@@ -11,8 +11,8 @@ then
     SUDO="sudo"
 fi
 
-eval "$SUDO yum groupinstall \"Development Tools\""
-eval "$SUDO yum install vim epel-release"
+eval "$SUDO yum groupinstall -y \"Development Tools\""
+eval "$SUDO yum install -y vim epel-release"
 
 # Install vundle.
 git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
