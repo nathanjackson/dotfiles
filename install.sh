@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # this script should just work on RHEL-like systems (Fedora, CentOS).
-# curl -s https://raw.githubusercontent.com/nathanjackson/dotfiles/master/install.sh | sh
+# curl -s https://raw.githubusercontent.com/nathanjackson/dotfiles/altamira/install.sh | sh
 
 uid=`id -u`
 SUDO=""
@@ -21,6 +21,13 @@ vim -c 'PluginInstall' -c 'qall' &
 wait $!
 # vim blows up the terminal, so fix it
 reset
+
+# Setup GOPATH
+eval "$SUDO yum install -y golang"
+mkdir -p $HOME/GoPath
+echo "export GOPATH=$HOME/GoPath" >> $HOME/.bashrc
+echo "export PATH=$GOPATH/bin" >> $HOME/.bashrc
+echo "go get -u github.com/nsf/gocode"
 
 # setup command-t
 eval "$SUDO yum install -y ruby-devel redhat-rpm-config"

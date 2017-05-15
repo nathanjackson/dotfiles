@@ -22,14 +22,8 @@ Plugin 'fatih/vim-go'
 " gocode
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
-" javacomplete2
-Plugin 'artur-shaik/vim-javacomplete2'
-
 " Syntastic
 Plugin 'vim-syntastic/syntastic'
-
-" neco-ghc
-Plugin 'eagletmt/neco-ghc'
 
 call vundle#end()
 
@@ -72,7 +66,3 @@ set pastetoggle=<F2> " Toggle paste
 autocmd FileType go set tabstop=8 shiftwidth=8 expandtab!
 autocmd FileType go inoremap <F5> <ESC>:w<CR>:GoRun<CR>
 autocmd FileType go map <F5> :w<CR>:GoRun<CR>
-
-" Haskell
-let g:haskellmode_completion_ghc = 1
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
