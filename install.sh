@@ -34,7 +34,7 @@ echo "go get -u github.com/nsf/gocode"
 
 # setup command-t
 eval "$SUDO yum install -y ruby-devel redhat-rpm-config"
-pushd $HOME/.vim/bundle/command-t/ruby/command-t
+pushd $HOME/.vim/bundle/command-t/ruby/command-t/ext/command-t
 ruby extconf.rb
 make
 popd
