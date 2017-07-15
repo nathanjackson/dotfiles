@@ -12,7 +12,7 @@ then
 fi
 
 eval "$SUDO yum groupinstall -y \"Development Tools\""
-eval "$SUDO yum install -y vim
+eval "$SUDO yum install -y vim"
 eval "$SUDO yum install -y epel-release"
 
 # Install vundle.
